@@ -48,7 +48,10 @@ export async function GET() {
   ]);
 
   const info: SettingsInfo = {
-    cloud_service_url: process.env.NEXT_PUBLIC_SITE_URL ?? "",
+    cloud_service_url:
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "") ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ""),
     cloud_api_key: dbKey || envKey,
     cloud_api_key_source: dbKey ? "db" : envKey ? "env" : "unset",
     supabase_connected: !!(

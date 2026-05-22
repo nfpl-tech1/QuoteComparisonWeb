@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import type { SettingsInfo } from "@/app/api/settings/info/route";
 
 // ---------------------------------------------------------------------------
@@ -133,7 +132,6 @@ function EditableSecret({
 // Page
 // ---------------------------------------------------------------------------
 export default function SettingsPage() {
-  const router = useRouter();
   const [info, setInfo] = useState<SettingsInfo | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -146,22 +144,11 @@ export default function SettingsPage() {
 
   useEffect(() => { load(); }, []);
 
-  async function signOut() {
-    await fetch("/api/auth", { method: "DELETE" });
-    router.replace("/login");
-  }
-
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-xl font-bold text-slate-900">Admin Settings</h1>
-          <p className="text-sm text-slate-400 mt-0.5">Manage secrets and service configuration live — no redeployment needed.</p>
-        </div>
-        <button onClick={signOut}
-          className="text-xs text-slate-400 hover:text-slate-700 border border-slate-200 rounded-lg px-3 py-1.5 bg-white hover:border-slate-300 transition-colors">
-          Sign out
-        </button>
+      <div className="mb-8">
+        <h1 className="text-xl font-bold text-slate-900">Admin Settings</h1>
+        <p className="text-sm text-slate-400 mt-0.5">Manage secrets and service configuration live — no redeployment needed.</p>
       </div>
 
       {loading ? (
