@@ -45,11 +45,8 @@ function LoginForm() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-12 h-12 rounded-2xl bg-brand-500 flex items-center justify-center text-white font-bold text-xl mb-4 shadow-sm">
-            N
-          </div>
-          <p className="text-xs text-slate-400 font-medium mb-1">Nagarkot Forwarders</p>
-          <h1 className="text-xl font-bold text-slate-900">Quote Comparison</h1>
+          <img src="/logo.png" alt="Nagarkot" className="h-10 w-auto mb-5" />
+          <h1 className="text-xl font-bold text-brand-500">Quote Comparison</h1>
           <p className="text-sm text-slate-400 mt-1">Internal dashboard</p>
         </div>
 
@@ -80,7 +77,7 @@ function LoginForm() {
             <button
               type="submit"
               disabled={loading || !password}
-              className="h-11 bg-slate-900 hover:bg-slate-700 disabled:bg-slate-100
+              className="h-11 bg-brand-500 hover:bg-brand-600 disabled:bg-slate-100
                 disabled:text-slate-400 text-white text-sm font-semibold rounded-xl
                 transition-colors mt-1"
             >

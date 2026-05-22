@@ -10,20 +10,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-slate-50 text-slate-900 min-h-screen antialiased">
-        <header className="bg-white border-b border-slate-200 px-6 py-3.5 flex items-center gap-3">
-          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold text-sm select-none">
-              N
-            </div>
-            <div>
-              <p className="text-xs text-slate-400 leading-none">Nagarkot Forwarders</p>
-              <p className="text-sm font-semibold leading-tight text-slate-800">Quote Comparison — Inquiry Log</p>
+        <header className="bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4">
+          <a href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+            <img src="/logo.png" alt="Nagarkot" className="h-8 w-auto" />
+            <div className="border-l border-slate-200 pl-4">
+              <p className="text-sm font-semibold leading-tight text-brand-500">Quote Comparison — Inquiry Log</p>
             </div>
           </a>
           <div className="ml-auto">
             <a
               href="/settings"
-              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-700 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-brand-500 transition-colors"
             >
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />

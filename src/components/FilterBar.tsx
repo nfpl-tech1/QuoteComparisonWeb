@@ -47,7 +47,7 @@ export default function FilterBar({ filters, onChange, total, allUsers }: Props)
               onClick={() => set("mode", m === "ALL" ? "" : m)}
               className={`px-3 h-8 text-xs font-semibold transition-colors ${
                 active
-                  ? "bg-slate-900 text-white"
+                  ? "bg-brand-500 text-white"
                   : "bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-700"
               }`}
             >

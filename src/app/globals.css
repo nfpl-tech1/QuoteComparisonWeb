@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand: #1B3461;
+    --color-accent: #CC1F28;
+  }
+
+  ::selection {
+    background-color: #d6e0f2;
+    color: #1B3461;
+  }
+
+  a {
+    color: inherit;
+  }
+}
