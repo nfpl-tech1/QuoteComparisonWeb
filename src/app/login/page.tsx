@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 function LoginForm() {
   const router = useRouter();
@@ -45,7 +46,7 @@ function LoginForm() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <img src="/logo.png" alt="Nagarkot" className="h-10 w-auto mb-5" />
+          <Image src="/logo.png" alt="Nagarkot" width={150} height={40} className="h-10 w-auto mb-5" priority />
           <h1 className="text-xl font-bold text-brand-500">Quote Comparison</h1>
           <p className="text-sm text-slate-400 mt-1">Internal dashboard</p>
         </div>
